@@ -1,14 +1,14 @@
 {
-  "name":"物流管理系统优化项目",
-  "company":"UVW 物流科技有限公司",
-  "contractAmount":950000,
-  "startDate":"2023-09-01",
+  "name": "物流管理系统优化项目",
+  "company": "UVW 物流科技有限公司",
+  "contractAmount": 950000,
+  "startDate": "2023-09-01",
   "endDate": "2027-12-31",
-  "developer":"STU软件研发中心",
+  "developer": "STU软件研发中心",
   "status-list": [
     {
       "status": "项目创建",
-      "c": "2022-12-19"
+      "date": "2022-12-19"
     },
     {
       "status": "合同签订",
@@ -16,17 +16,46 @@
     },
     {
       "status": "项目结项",
-      "date": ""
+      "date": "",
+      "icon": "CircleCheckFilled"
     },
     {
       "status": "合同完成",
-      "date": ""
+      "date": "",
+      "icon": "UserFilled"
     },
     {
       "status": "合同外",
-      "date": ""
+      "date": "",
+      "icon": "List"
     }
   ],
+  "overview-days": {
+    "title": "共计1838天",
+    "data": [
+      {
+        "value": 574,
+        "name": "已用工天"
+      },
+      {
+        "value": 12647,
+        "name": "剩余总工天"
+      }
+    ]
+  },
+  "overview-money": {
+    "title": "$283.1万元 项目合同额",
+    "data": [
+      {
+        "value": 171.6,
+        "name": "支出"
+      },
+      {
+        "value": 111.5,
+        "name": "结余"
+      }
+    ]
+  },
   "costList": [
     {
       "name": "出差费用",
