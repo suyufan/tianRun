@@ -1,6 +1,6 @@
 <template>
   <el-steps
-    style="max-width: 600px"
+    style="max-width: 1000px"
     :space="200"
     :active="2"
     finish-status="success"
@@ -11,6 +11,7 @@
       :title="item.status"
       :icon="item.icon"
       :description="item.date"
+      :class="item.class"
     ></el-step>
   </el-steps>
 </template>
@@ -20,9 +21,24 @@
 defineProps(["data"]);
 </script>
   
-<style scoped>
-.demo-progress .el-progress--line {
-  margin-bottom: 15px;
-  max-width: 600px;
+<style>
+.step__line--pending .el-step__head .el-step__line .el-step__line-inner{
+  /* transition-delay: 0ms !important;  */
+  border-width: 1px !important; 
+  width: 50% !important;
+}
+.el-step__head.is-success {
+  border-color: #409eff;
+  color: #409eff;
+}
+.el-step__title.is-success {
+  color: #409eff;
+}
+.el-step__description.is-success {
+  color: #409eff;
+}
+.el-step__head.is-process {
+  border-color: #a8abb2;
+  color: #a8abb2;
 }
 </style>

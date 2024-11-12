@@ -21,7 +21,6 @@ const initializeChart = () => {
     // 设置扇形图的配置项
     const option = {
       title: {
-        // text: props.title,
         text: formatTitle(props.title),
         left: "center",
         top: "center",
@@ -56,7 +55,7 @@ const initializeChart = () => {
       legend: {
         orient: "vertical",
         left: "center",
-        bottom: "-2%",
+        bottom: "0",
         itemWidth: 10, // 设置图例标识符的宽度
         itemHeight: 10, // 设置图例标识符的高度，使其变成正方形
         itemStyle: {

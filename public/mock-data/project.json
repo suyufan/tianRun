@@ -12,7 +12,8 @@
     },
     {
       "status": "合同签订",
-      "date": "2022-12-30"
+      "date": "2022-12-30",
+      "class": "step__line--pending"
     },
     {
       "status": "项目结项",
