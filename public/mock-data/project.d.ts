@@ -28,6 +28,10 @@ interface Project {
    */
   costList: {
     /**
+     * 序号
+     */
+    index: number;
+    /**
      * 名称
      */
     name: string;
@@ -39,6 +43,13 @@ interface Project {
      * 占比
      */
     proportion: number;
+    color: string;
+  }[];
+  // 成本列表 列名
+  tableColumns: {
+    label: string;
+    prop: string;
+    align: string;
   }[];
 
   /**
@@ -46,7 +57,11 @@ interface Project {
    */
   statusList: { status: string; date: string; icon: string }[];
   overviewDay: {
-    data: Array<{ value: number; name: string; color: string }>;
+    data: { value: number; name: string; color: string }[];
+    title: string;
+  };
+  overviewMoney: {
+    data: { value: number; name: string; color: string }[];
     title: string;
   };
 }

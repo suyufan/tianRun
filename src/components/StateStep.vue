@@ -22,7 +22,7 @@ defineProps(["data"]);
 </script>
   
 <style>
-.step__line--pending .el-step__head .el-step__line .el-step__line-inner{
+.step-line__pending .el-step__head .el-step__line .el-step__line-inner{
   /* transition-delay: 0ms !important;  */
   border-width: 1px !important; 
   width: 50% !important;

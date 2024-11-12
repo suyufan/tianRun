@@ -13,7 +13,7 @@
     {
       "status": "合同签订",
       "date": "2022-12-30",
-      "class": "step__line--pending"
+      "class": "step-line__pending"
     },
     {
       "status": "项目结项",
@@ -63,24 +63,53 @@
   },
   "costList": [
     {
+      "index": 1,
       "name": "出差费用",
       "amount": 123745,
-      "proportion": 0.04
+      "proportion": 0.04,
+      "color": "#2ed573"
     },
     {
+      "index": 2,
       "name": "费用报销",
       "amount": 190000,
-      "proportion": 0.07
+      "proportion": 0.07,
+      "color": "#2ed573"
     },
     {
+      "index": 3,
       "name": "外协支出",
       "amount": 1380000,
       "proportion": 0.49
     },
     {
+      "index": 4,
       "name": "生产成本",
       "amount": 22080,
-      "proportion": 0.01
+      "proportion": 0.01,
+      "color": "#2ed573"
+    }
+  ],
+  "tableColumns": [
+    {
+      "label": "序号",
+      "prop": "index",
+      "align": "center"
+    },
+    {
+      "label": "费用类型",
+      "prop": "name",
+      "align": "left"
+    },
+    {
+      "label": "费用金额",
+      "prop": "amount",
+      "align": "right"
+    },
+    {
+      "label": "占比",
+      "prop": "proportion",
+      "align": "center"
     }
   ]
 }

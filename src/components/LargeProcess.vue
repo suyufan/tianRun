@@ -1,29 +1,13 @@
 <template>
-  <div class="demo-progress">
-    <el-progress :text-inside="true" :stroke-width="26" :percentage="70" />
-    <el-progress
-      :text-inside="true"
-      :stroke-width="24"
-      :percentage="100"
-      status="success"
-    />
-    <el-progress
-      :text-inside="true"
-      :stroke-width="22"
-      :percentage="80"
-      status="warning"
-    />
-    <el-progress
-      :text-inside="true"
-      :stroke-width="20"
-      :percentage="50"
-      status="exception"
-    />
-  </div>
+  <el-progress :percentage="props.percentage" :color="props.color" v-bind="$attrs" :text-inside="true" :stroke-width="22"/>
 </template>
 
 <script lang="ts" setup>
 // 自定义进度条 Process
+const props = defineProps<{
+  percentage: number;
+  color: string;
+}>();
 </script>
 
 <style scoped>

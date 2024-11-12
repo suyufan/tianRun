@@ -108,7 +108,7 @@ const initializeChart = () => {
 const totalValue = () => props.data.reduce((sum, item) => sum + item.value, 0);
 
 // 格式化标题内容的函数
-function formatTitle(text) {
+const formatTitle = (text) => {
   if (text.includes("共计")) {
     // 情况 1：标题包含“共计”，例如“共计183天”
     const value = text.match(/\d+/)[0];
