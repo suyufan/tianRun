@@ -44,6 +44,9 @@ interface Project {
   /**
    * 项目状态
    */
-  statusList: { status: string; date: string; icon: string; }[];
-//   overviewDay: {data: Array<{ value: number; name: string }>, title: string}
+  statusList: { status: string; date: string; icon: string }[];
+  overviewDay: {
+    data: Array<{ value: number; name: string; color: string }>;
+    title: string;
+  };
 }

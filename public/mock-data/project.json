@@ -35,11 +35,13 @@
     "data": [
       {
         "value": 574,
-        "name": "已用工天"
+        "name": "已用工天",
+        "color": "#686de0"
       },
       {
         "value": 12647,
-        "name": "剩余总工天"
+        "name": "剩余总工天",
+        "color": "#dcdde1"
       }
     ]
   },
@@ -48,11 +50,13 @@
     "data": [
       {
         "value": 171.6,
-        "name": "支出"
+        "name": "支出",
+        "color": "#686de0"
       },
       {
         "value": 111.5,
-        "name": "结余"
+        "name": "结余",
+        "color": "#e67e22"
       }
     ]
   },
