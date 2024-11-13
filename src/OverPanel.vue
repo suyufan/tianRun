@@ -15,10 +15,10 @@
 </template>
 
 <script lang="ts" setup>
-import * as TitleCard from "./components/TitleCard.vue";
-import * as StateStep from "./components/StateStep.vue";
-import * as PieChart from "./components/PieChart.vue";
-import * as ProTable from "./components/ProTable.vue";
+import TitleCard from "./components/TitleCard.vue";
+import StateStep from "./components/StateStep.vue";
+import PieChart from "./components/PieChart.vue";
+import ProTable from "./components/ProTable.vue";
 import { reactive, onMounted } from "vue";
 
 const node = reactive([]);
