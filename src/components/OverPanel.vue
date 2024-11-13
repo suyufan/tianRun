@@ -1,4 +1,4 @@
-    <template>
+<template>
   <div>
     <TitleCard title="项目节点"><StateStep :data="node"></StateStep></TitleCard>
     <TitleCard title="项目概况"
@@ -8,10 +8,9 @@
         :title="overviewMoney.title"
       ></PieChart>
     </TitleCard>
-    <TitleCard title="项目成本"
-      >一个Table Table(序号，费用类型，费用金额，占比)
-    <ProTable :tableData="tableData" :columns="tableColumns"></ProTable>
-  </TitleCard>
+    <TitleCard title="项目成本">
+      <ProTable :tableData="tableData" :columns="tableColumns"></ProTable>
+    </TitleCard>
   </div>
 </template>
 
@@ -46,7 +45,5 @@ onMounted(async () => {
   Object.assign(tableColumns, data["tableColumns"]);
 });
 </script>
-  
-<style scoped>
-</style>
-  
+
+<style scoped></style>

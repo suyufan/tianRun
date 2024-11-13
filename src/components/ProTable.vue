@@ -1,5 +1,5 @@
 <template>
-  <el-table :data="props.tableData" style="width: 100%">
+  <el-table :data="props.tableData" style="width: 100%" :span-method="tableSpanMethod">
     <template v-for="(column, index) in props.columns" :key="index">
       <el-table-column
         :prop="column.prop"
@@ -9,15 +9,18 @@
         <!-- 插槽：允许外部定义内容 -->
         <template v-slot="scope">
           <slot :name="`column-${column.prop}`" v-bind="scope">
-            <span v-if="column.prop === 'name'">
+            <span v-if="column.prop === 'index'" class="table-columns__index">
+                <span>{{ scope.row[column.prop] }}</span>
+            </span>
+            <span v-else-if="column.prop === 'name'">
                 {{ scope.row[column.prop] }}
-              <LargeProcess
+                <LargeProcess
                 :percentage="formatProcess(scope.row.proportion)"
                 :color="scope.row.color"
                 :textColor="scope.row.textColor"
               ></LargeProcess>
             </span>
-            <span v-else-if="column.prop === 'amount'">
+            <span v-else-if="column.prop === 'amount'" class="table-columns__blue">
               {{ formatAmount(scope.row.amount) }}
             </span>
             <span v-else-if="column.prop === 'proportion'">
@@ -58,4 +61,31 @@ const formatProportion = (proportion) => {
 const formatProcess = (proportion) => {
   return Math.round(proportion * 100);
 };
+
+// 合并单元格方法
+function tableSpanMethod({ row, column, rowIndex, columnIndex }) {
+  if (props.columns[columnIndex].prop === 'name') {
+    return [1, 3]; // 跨越费用类型、费用金额和占比列
+  } else if (['amount', 'proportion'].includes(props.columns[columnIndex].prop)) {
+    return [0, 0]; // 隐藏 "费用金额" 和 "占比" 列内容
+  }
+}
 </script>
+
+<style scoped lang="scss">
+.table-columns__index {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  border-radius: 50%;
+  background: #f1f2f6;
+  margin: auto;
+  span {
+    margin: auto;
+  }
+}
+
+.table-columns__blue {
+  color: #1e90ff;
+}
+</style>
