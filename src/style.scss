@@ -1,0 +1,17 @@
+:root {
+    /* 亮色模式 */
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #1e90ff;
+    --gray-color: #a8abb2;
+  }
+  
+  [data-theme="dark"] {
+    /* 暗色模式 */
+    --background-color: #1e1e1e;
+    --text-color: #f0f0f0;
+    --primary-color: #6495ed;
+    --gray-color: #a4b0be;
+
+  }
+  

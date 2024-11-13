@@ -17,9 +17,10 @@ defineProps({
 </script>
 
 <style scoped>
-/* .el-card :deep() .el-card__header {
-    padding: 12px 20px;
-} */
+.el-card {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
 .project-card__header {
   font-size: 20px;
   font-weight: 800;

@@ -26,20 +26,42 @@ defineProps(["data"]);
   border-width: 1px !important; 
   width: 50% !important;
 }
+/**
+ * Step 完成状态样式
+ */
 .el-step__head.is-success {
-  border-color: #409eff;
-  color: #409eff;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 .el-step__title.is-success {
-  color: #409eff;
+  color: var(--primary-color);
 }
 .el-step__description.is-success {
-  color: #409eff;
+  color: var(--primary-color);
 }
-.el-step__head.is-process {
-  border-color: #a8abb2;
-  color: #a8abb2;
+/**
+ * Step 进行中状态样式
+ */
+ .el-step__head.is-process {
+  border-color: var(--gray-color);
+  color: var(--gray-color);
 }
+.el-step__title.is-process {
+  color: var(--text-color);
+}
+.el-step__description.is-process {
+  color: var(--text-color);
+}
+/**
+ * Step 等待状态样式
+ */
+.el-step__title.is-wait {
+  color: var(--text-color);
+}
+.el-step__description.is-wait {
+  color: var(--text-color);
+}
+
 @media (max-width: 1200px) {
   .el-step__title {
     font-size: 16px;
