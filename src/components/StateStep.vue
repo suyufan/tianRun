@@ -17,7 +17,6 @@
 </template>
 
 <script lang="ts" setup>
-// 自定义Step
 defineProps(["data"]);
 </script>
   
@@ -40,5 +39,18 @@ defineProps(["data"]);
 .el-step__head.is-process {
   border-color: #a8abb2;
   color: #a8abb2;
+}
+@media (max-width: 1200px) {
+  .el-step__title {
+    font-size: 16px;
+  }
+}
+@media (max-width: 980px) {
+  .el-step__description {
+    font-size: 10px;
+  }
+  .el-step__title {
+    font-size: 14px;
+  }
 }
 </style>

@@ -29,17 +29,17 @@ const initializeChart = () => {
             // 定义“天”或其他黑色字体的样式
             black: {
               color: "#000",
-              fontSize: 16,
+              fontSize: getResponsiveBigFontSize(),
             },
             // 定义蓝色字体样式
             blue: {
               color: "#0000ff",
-              fontSize: 26,
+              fontSize: getResponsiveHighFontSize(),
             },
             // 定义灰色、小号字体的样式
             graySmall: {
               color: "#888888",
-              fontSize: 14,
+              fontSize: getResponsiveSmallFontSize(),
             },
             // 占位符样式，用于调整间距
             spacer: {
@@ -63,7 +63,7 @@ const initializeChart = () => {
         },
         // 自定义图列文字
         textStyle: {
-          fontSize: 16,
+          fontSize: getResponsiveBigFontSize(),
         },
 
         formatter: (name: string) => {
@@ -104,6 +104,23 @@ const initializeChart = () => {
   }
 };
 
+const width = window.innerWidth;
+
+function getResponsiveHighFontSize() {
+  if (width <= 980) return 22;
+  if (width <= 1200) return 24;
+  return 26;
+}
+function getResponsiveBigFontSize() {
+  if (width <= 980) return 12;
+  if (width <= 1200) return 14;
+  return 16;
+}
+function getResponsiveSmallFontSize() {
+  if (width <= 980) return 10;
+  if (width <= 1200) return 12;
+  return 14;
+}
 // 计算数据总和，供图例的百分比显示使用
 const totalValue = () => props.data.reduce((sum, item) => sum + item.value, 0);
 
@@ -119,7 +136,7 @@ const formatTitle = (text) => {
     return `{black|${amount}万元}\n{spacer| }\n{graySmall|项目合同额}`;
   }
   return text;
-}
+};
 
 // 当 data 属性发生变化时，更新图表
 watch(
@@ -134,11 +151,18 @@ watch(
   { deep: true }
 );
 watch(
-      () => props.title,
-      (newData) => {
-        initializeChart();
-      }
-    );
+  () => props.title,
+  () => {
+    initializeChart();
+  }
+);
+
+watch(
+  () => width,
+  () => {
+    initializeChart();
+  }
+);
 
 // 挂载和卸载时，初始化和销毁图表
 onMounted(() => {
@@ -158,7 +182,7 @@ const resizeChart = () => {
 <style scoped>
 .pie-chart {
   width: 50%;
-  height: 400px;
+  height: 310px;
   float: left;
   top: -50px;
 }

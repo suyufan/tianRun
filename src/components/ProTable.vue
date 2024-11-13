@@ -11,17 +11,20 @@
         <template v-slot="scope">
           <slot :name="`column-${column.prop}`" v-bind="scope">
             <span v-if="column.prop === 'index'" class="table-columns__index">
-                <span>{{ scope.row[column.prop] }}</span>
+              <span>{{ scope.row[column.prop] }}</span>
             </span>
             <span v-else-if="column.prop === 'name'">
-                {{ scope.row[column.prop] }}
-                <LargeProcess
+              {{ scope.row[column.prop] }}
+              <LargeProcess
                 :percentage="formatProcess(scope.row.proportion)"
                 :color="scope.row.color"
                 :textColor="scope.row.textColor"
               ></LargeProcess>
             </span>
-            <span v-else-if="column.prop === 'amount'" class="table-columns__blue">
+            <span
+              v-else-if="column.prop === 'amount'"
+              class="table-columns__blue"
+            >
               {{ formatAmount(scope.row.amount) }}
             </span>
             <span v-else-if="column.prop === 'proportion'">
@@ -47,7 +50,12 @@ const props = defineProps<{
     amount: number;
     proportion: number;
   }>;
-  columns: Array<{ label: string; prop: string; align: string; width?: number }>;
+  columns: Array<{
+    label: string;
+    prop: string;
+    align: string;
+    width?: number;
+  }>;
 }>();
 
 const formatAmount = (amount) => {
@@ -65,7 +73,7 @@ const formatProcess = (proportion) => {
 
 // 合并单元格方法
 function tableSpanMethod({ row, column, rowIndex, columnIndex }) {
-  if (props.columns[columnIndex].prop === 'name') {
+  if (props.columns[columnIndex].prop === "name") {
     return [1, 3]; // 跨越费用类型、费用金额和占比列
   }
 }
@@ -89,9 +97,25 @@ function tableSpanMethod({ row, column, rowIndex, columnIndex }) {
 }
 
 .el-table td.el-table__cell div {
-    font-size: 16px;
+  font-size: 16px;
 }
 .el-table tr {
-    font-size: 18px;
+  font-size: 18px;
+}
+@media (max-width: 1200px) {
+  .el-table td.el-table__cell div {
+    font-size: 14px;
+  }
+  .el-table tr {
+    font-size: 16px;
+  }
+}
+@media (max-width: 980px) {
+  .el-table td.el-table__cell div {
+    font-size: 12px;
+  }
+  .el-table tr {
+    font-size: 14px;
+  }
 }
 </style>
