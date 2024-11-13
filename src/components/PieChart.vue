@@ -29,7 +29,7 @@ const initializeChart = () => {
             // 定义“天”或其他黑色字体的样式
             black: {
               color: "#000",
-              fontSize: 18,
+              fontSize: 16,
             },
             // 定义蓝色字体样式
             blue: {
@@ -63,7 +63,7 @@ const initializeChart = () => {
         },
         // 自定义图列文字
         textStyle: {
-          fontSize: 18,
+          fontSize: 16,
         },
 
         formatter: (name: string) => {
@@ -160,6 +160,6 @@ const resizeChart = () => {
   width: 50%;
   height: 400px;
   float: left;
-  top: -30px;
+  top: -50px;
 }
 </style>

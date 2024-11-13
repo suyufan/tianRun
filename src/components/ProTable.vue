@@ -5,6 +5,7 @@
         :prop="column.prop"
         :label="column.label"
         :align="column.align || 'center'"
+        :width="column.width"
       >
         <!-- 插槽：允许外部定义内容 -->
         <template v-slot="scope">
@@ -46,7 +47,7 @@ const props = defineProps<{
     amount: number;
     proportion: number;
   }>;
-  columns: Array<{ label: string; prop: string; align: string }>;
+  columns: Array<{ label: string; prop: string; align: string; width?: number }>;
 }>();
 
 const formatAmount = (amount) => {
@@ -70,7 +71,7 @@ function tableSpanMethod({ row, column, rowIndex, columnIndex }) {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .table-columns__index {
   width: 30px;
   height: 30px;
@@ -85,5 +86,12 @@ function tableSpanMethod({ row, column, rowIndex, columnIndex }) {
 
 .table-columns__blue {
   color: #1e90ff;
+}
+
+.el-table td.el-table__cell div {
+    font-size: 16px;
+}
+.el-table tr {
+    font-size: 18px;
 }
 </style>

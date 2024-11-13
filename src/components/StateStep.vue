@@ -1,7 +1,7 @@
 <template>
   <el-steps
-    style="max-width: 1500px"
-    :space="300"
+    style="max-width: 1920px"
+    :space="384"
     :active="2"
     finish-status="success"
   >

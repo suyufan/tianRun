@@ -21,7 +21,7 @@ defineProps({
     padding: 12px 20px;
 } */
 .project-card__header {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 800;
 }
 </style>

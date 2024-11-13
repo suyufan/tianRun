@@ -51,6 +51,7 @@ interface Project {
     label: string;
     prop: string;
     align: string;
+    width?: number;
   }[];
 
   /**

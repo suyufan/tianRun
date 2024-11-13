@@ -1,5 +1,5 @@
 <script setup>
-import OverPanel from './components/OverPanel.vue'
+import OverPanel from './OverPanel.vue'
 </script>
 
 <template>

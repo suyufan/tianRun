@@ -97,7 +97,8 @@
     {
       "label": "序号",
       "prop": "index",
-      "align": "center"
+      "align": "center",
+      "width": 80
     },
     {
       "label": "费用类型",
@@ -107,12 +108,14 @@
     {
       "label": "费用金额",
       "prop": "amount",
-      "align": "right"
+      "align": "right",
+      "width": 150
     },
     {
       "label": "占比",
       "prop": "proportion",
-      "align": "center"
+      "align": "center",
+      "width": 100
     }
   ]
 }
