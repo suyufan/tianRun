@@ -133,6 +133,12 @@ watch(
   },
   { deep: true }
 );
+watch(
+      () => props.title,
+      (newData) => {
+        initializeChart();
+      }
+    );
 
 // 挂载和卸载时，初始化和销毁图表
 onMounted(() => {

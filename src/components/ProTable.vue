@@ -1,5 +1,5 @@
 <template>
-  <el-table :data="props.tableData" style="width: 100%" :span-method="tableSpanMethod">
+  <el-table :data="props.tableData" style="width: 100%">
     <template v-for="(column, index) in props.columns" :key="index">
       <el-table-column
         :prop="column.prop"
@@ -66,8 +66,6 @@ const formatProcess = (proportion) => {
 function tableSpanMethod({ row, column, rowIndex, columnIndex }) {
   if (props.columns[columnIndex].prop === 'name') {
     return [1, 3]; // 跨越费用类型、费用金额和占比列
-  } else if (['amount', 'proportion'].includes(props.columns[columnIndex].prop)) {
-    return [0, 0]; // 隐藏 "费用金额" 和 "占比" 列内容
   }
 }
 </script>
