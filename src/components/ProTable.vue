@@ -41,7 +41,7 @@
 </template>
 
 <script lang="ts" setup>
-import LargeProcess from "./LargeProcess.vue";
+import * as LargeProcess from "./LargeProcess.vue";
 
 const props = defineProps<{
   tableData: Array<{

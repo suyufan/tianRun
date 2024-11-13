@@ -15,13 +15,12 @@
 </template>
 
 <script lang="ts" setup>
-import TitleCard from "./components/TitleCard.vue";
-import StateStep from "./components/StateStep.vue";
-import PieChart from "./components/PieChart.vue";
-import ProTable from "./components/ProTable.vue";
+import * as TitleCard from "./components/TitleCard.vue";
+import * as StateStep from "./components/StateStep.vue";
+import * as PieChart from "./components/PieChart.vue";
+import * as ProTable from "./components/ProTable.vue";
 import { reactive, onMounted } from "vue";
 
-const data = reactive({});
 const node = reactive([]);
 const overviewDay = reactive({
   data: [{ value: 1, name: "" }],
@@ -37,7 +36,6 @@ const tableColumns = reactive([]);
 onMounted(async () => {
   const response = await fetch("../../public/mock-data/project.json");
   const data = await response.json();
-  console.log("data", data["status-list"]);
   Object.assign(node, data["status-list"]);
   Object.assign(overviewDay, data["overview-days"]);
   Object.assign(overviewMoney, data["overview-money"]);
