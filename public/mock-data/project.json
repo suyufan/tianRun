@@ -67,14 +67,16 @@
       "name": "出差费用",
       "amount": 123745,
       "proportion": 0.04,
-      "color": "#2ed573"
+      "color": "#2ed573",
+      "textColor": "black"
     },
     {
       "index": 2,
       "name": "费用报销",
       "amount": 190000,
       "proportion": 0.07,
-      "color": "#2ed573"
+      "color": "#2ed573",
+      "textColor": "black"
     },
     {
       "index": 3,
@@ -87,7 +89,8 @@
       "name": "生产成本",
       "amount": 22080,
       "proportion": 0.01,
-      "color": "#2ed573"
+      "color": "#2ed573",
+      "textColor": "black"
     }
   ],
   "tableColumns": [

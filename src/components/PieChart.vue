@@ -7,7 +7,7 @@ import { ref, onMounted, onUnmounted, watch } from "vue";
 import * as echarts from "echarts";
 
 const props = defineProps<{
-  data: Array<{ value: number; name: string; color: string }>;
+  data: Array<{ value: number; name: string; color?: string }>;
   title?: string;
 }>();
 

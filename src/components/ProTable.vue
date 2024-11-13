@@ -10,12 +10,14 @@
         <template v-slot="scope">
           <slot :name="`column-${column.prop}`" v-bind="scope">
             <span v-if="column.prop === 'name'">
+                {{ scope.row[column.prop] }}
               <LargeProcess
                 :percentage="formatProcess(scope.row.proportion)"
                 :color="scope.row.color"
+                :textColor="scope.row.textColor"
               ></LargeProcess>
             </span>
-            <span v-if="column.prop === 'amount'">
+            <span v-else-if="column.prop === 'amount'">
               {{ formatAmount(scope.row.amount) }}
             </span>
             <span v-else-if="column.prop === 'proportion'">
@@ -52,7 +54,8 @@ const formatAmount = (amount) => {
 const formatProportion = (proportion) => {
   return `${(proportion * 100).toFixed(2)} %`;
 };
+// 格式化进度条数值
 const formatProcess = (proportion) => {
-  return (proportion * 100);
+  return Math.round(proportion * 100);
 };
 </script>

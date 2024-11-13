@@ -43,7 +43,8 @@ interface Project {
      * 占比
      */
     proportion: number;
-    color: string;
+    color?: string;
+    textColor?: string;
   }[];
   // 成本列表 列名
   tableColumns: {
