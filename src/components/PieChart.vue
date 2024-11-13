@@ -38,7 +38,7 @@ const initializeChart = () => {
             },
             // 定义灰色、小号字体的样式
             graySmall: {
-              color: "#888888",
+              color: "#57606f",
               fontSize: getResponsiveSmallFontSize(),
             },
             // 占位符样式，用于调整间距
@@ -55,7 +55,7 @@ const initializeChart = () => {
       legend: {
         orient: "vertical",
         left: "center",
-        bottom: "0",
+        bottom: "-2px",
         itemWidth: 10, // 设置图例标识符的宽度
         itemHeight: 10, // 设置图例标识符的高度，使其变成正方形
         itemStyle: {
