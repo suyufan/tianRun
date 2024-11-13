@@ -4,14 +4,23 @@
     --text-color: #333333;
     --primary-color: #1e90ff;
     --gray-color: #a8abb2;
+    --table-background-color: #ffffff;
+    --table-header-background: #ffffff;
+    --table-header-color: #747d8c;
+    --table-text-color: #2f3640;
+    --shadow-background: #f1f2f6;
   }
   
   [data-theme="dark"] {
     /* 暗色模式 */
-    --background-color: #1e1e1e;
+    --background-color: #747d8c;
     --text-color: #f0f0f0;
     --primary-color: #6495ed;
     --gray-color: #a4b0be;
-
+    --table-background-color: #747d8c;
+    --table-header-background: #747d8c;
+    --table-header-color: #f5f6fa;
+    --table-text-color: #2f3640;
+    --shadow-background: #dcdde1;
   }
   

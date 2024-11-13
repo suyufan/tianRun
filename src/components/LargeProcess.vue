@@ -21,9 +21,8 @@ const props = defineProps<{
 }>();
 </script>
 
-<style scoped>
-.demo-progress .el-progress--line {
-  margin-bottom: 15px;
-  max-width: 600px;
+<style>
+.el-progress-bar__outer {
+  background-color: var(--shadow-background);
 }
 </style>

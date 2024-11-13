@@ -85,15 +85,25 @@ function tableSpanMethod({ row, column, rowIndex, columnIndex }) {
   height: 30px;
   display: flex;
   border-radius: 50%;
-  background: #f1f2f6;
+  background: var(--shadow-background);
   margin: auto;
   span {
     margin: auto;
   }
 }
 
+.el-table th {
+    background-color: var(--table-header-background) !important;
+    color: var(--table-header-color) !important;
+}
+
+.el-table__inner-wrapper {
+  color: var(--table-text-color);
+  background-color: var(--table-background-color) !important;
+}
+
 .table-columns__blue {
-  color: #1e90ff;
+  color: var(--primary-color);
 }
 
 .el-table td.el-table__cell div {
